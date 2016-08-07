@@ -1,0 +1,36 @@
+{{#mdl-layout-drawer fixed="true"}}
+  <header class="drawer-header">
+    <img class="profile-image" src="{{sessionAccount.account.avatarUrl}}">
+    <div class="profile-name">{{sessionAccount.account.name}}</div>
+    {{#mdl-menu icon="expand_more" position="bottom-right" class="profile-menu"}}
+      {{!-- {{#mdl-menu-item 'authenticated.profile'}}<i class="material-icons">person</i><span class="mdl-menu-item-text">View Profile</span>{{/mdl-menu-item}} --}}
+      {{#mdl-menu-item 'authenticated.feeds.manage'}}<i class="material-icons">list</i><span class="mdl-menu-item-text">Subscriptions</span>{{/mdl-menu-item}}
+      {{!-- {{#mdl-menu-item 'authenticated.settings'}}<i class="material-icons">settings</i><span class="mdl-menu-item-text">Settings</span>{{/mdl-menu-item}} --}}
+      <div class="mdl-menu-separator"/>
+      {{#mdl-menu-item action="logout"}}
+      <i class="material-icons">power_settings_new</i><span class="mdl-menu-item-text">Logout</span>{{/mdl-menu-item}}
+    {{/mdl-menu}}
+  </header>
+
+  <nav class="mdl-navigation">
+    {{#each model as |feed|}}
+      {{#unless feed.isNew}}
+        {{#if feed.title}}
+          {{#link-to 'authenticated.feeds.show' feed.id class="mdl-navigation__link"}}
+            {{#if feed.unreadCount}}
+              <div class="mdl-navigation-title with-badge">{{feed.title}}</div>
+              <div class="badge badge--no-background">{{feed.unreadCount}}</div>
+            {{else}}
+              <div class="mdl-navigation-title">{{feed.title}}</div>
+            {{/if}}
+          {{/link-to}}
+        {{/if}}
+      {{/unless}}
+    {{/each}}
+  </nav>
+{{/mdl-layout-drawer}}
+{{#mdl-layout-content}}
+  <div class="content">
+    {{outlet}}
+  </div>
+{{/mdl-layout-content}}

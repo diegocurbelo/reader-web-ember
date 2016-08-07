@@ -1,0 +1,15 @@
+@import 'bower_components/material-design-lite/src/material-design-lite';
+@import 'ember-mdl';
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.mdl-layout__content {
+  background-color: #edecec;
+}
+
+@import 'badges';
+@import 'header-and-menu';
+@import 'cards';
+@import 'external-page';

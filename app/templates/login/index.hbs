@@ -1,0 +1,19 @@
+<div class="centered">
+  <div class="login-logo">
+    <img src="assets/img/logo_blue.png" alt="logo" height="66px" />
+  </div>  
+  {{#unless session.isAuthenticated}}
+    <div class="login-form">
+      <div class="login-form-title">
+        <span>welcome</span>
+      </div>
+      <div class="social-buttons">
+        <a href="{{facebookUrl}}" class="button-facebook">
+          <img src="assets/img/facebook.png" alt="facebook" height="30px"/>
+          <span>Login with Facebook</span>
+        </a>
+      </div>
+    </div>
+  {{/unless}}
+</div>
+<div class="beta-overlay">beta</div>

@@ -1,0 +1,176 @@
+/* LOGIN */
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form {
+  border-top: 1px solid #ccc;
+  margin-top: 55px;
+  
+  .login-form-title {
+    margin-top: -13px;
+    text-align: center;
+    
+    span {
+      padding: 0 7px;
+      background-color: white;
+      font-size: 15px;
+      font-family: Titillium Web;
+    }
+
+  } // .login_form_title
+
+  .social-buttons {
+    margin-top: 43px;
+
+    a {
+      display: block;
+      width: 264px;
+      height: 34px;
+      margin: 10px auto;
+      color: #FFFFFF;
+      background: #999;
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 5px 5px 5px 5px;
+      text-decoration: none;
+      vertical-align: middle;
+
+      img {
+        float: left;
+        margin: 2px 15px 2px 5px;
+      }
+
+      span {
+        float: left;
+        margin-top: 7px;
+        font-size: 21px;
+      }
+
+      &.button-facebook {
+        font-family: 'Lucida Grande', Tahoma, Geneva, Verdana, Helvetica, Arial, sans-serif;
+        &:hover {
+          background: #3b5998;
+          border: 1px solid #3b5998;
+        }
+      }
+    }
+
+  } // .social-buttons
+
+} // .login_form
+
+.beta-overlay {
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  font-family: Titillium Web, "Helvetica", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #999;
+  z-index: 9999;
+}
+
+// div.centered {
+//   width: 300px;
+//   height: 50%;
+//   min-height: 280px;
+//   text-align: center;
+//   margin: auto;
+//   position: absolute;
+//   top: 0; left: 0; bottom: 0; right: 0;
+
+//   div#login_form {
+//     width:  300px;
+//     margin: 55px auto 0 auto;
+//     border-top: 1px solid #ccc;
+//     text-align: center;
+
+//     div#login_form_title {
+//       margin-top: -13px;
+//       text-align: center;
+//       span {
+//         background-color: white;
+//         padding: 0 7px;
+//         font-size: 15px;
+//         font-family: Titillium Web;
+//       }
+//     }
+
+//     div#
+
+//     }
+
+//   }
+// }
+
+
+/*** ERROR PAGE ***/
+.centered.error-page {
+  font-family: Titillium Web;
+  #error_form {
+    margin: 35px auto 0 auto;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 25px;
+    #error_form_title {
+      margin-top: -36px;
+      text-align: center;
+      span {
+        background-color: white;
+        padding: 0 10px;
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+.mdl-spinner--single-color .mdl-spinner__layer-1,
+.mdl-spinner--single-color .mdl-spinner__layer-2,
+.mdl-spinner--single-color .mdl-spinner__layer-3,
+.mdl-spinner--single-color .mdl-spinner__layer-4 {
+  border-color: #3b8dbd;
+}
+
+/**** LOADING ****/
+// .loader {
+//   position: absolute;
+//   width:  80px;
+//   height: 80px;
+//   top: calc(50% - 40px);
+//   left: calc(50% - 40px);
+//   color: #3b8dbd;
+//   animation: rotate 2s infinite;
+//   -webkit-animation: rotate 2s infinite;
+//   content: '';
+//   .temp {
+//     width:  40px;
+//     height: 40px;
+//   }
+//   i {
+//     font-size: 69px;
+//     margin: -51px 0 0 22px;
+//   }
+// }
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,20 @@
+{{#mdl-data-table class="mdl-shadow--2dp" as |table|}}
+  <tbody>
+    {{#each model as |feed|}}
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric title">
+          <a href="{{siteUrl}}">{{feed.title}}</a><br/>
+          {{feed.feedUrl}}
+        </td>
+        <td class="options">
+          {{mdl-button icon="create" action="edit" feed_id=feed.id}}
+          {{mdl-button icon="delete" action="remove" feed_id=feed.id}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+{{/mdl-data-table}}
+
+<div class="add-button">
+  {{#mdl-button action="addFeed" fab=true accent=true ripple=true }}<i class="material-icons">add</i>{{/mdl-button}}
+</div>

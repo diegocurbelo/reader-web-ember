@@ -1,0 +1,9 @@
+{{#if feed.unreadCount}}
+  {{#unless entries}}
+    <div class="centered">
+      {{mdl-spinner singleColor=true}}
+    </div>
+  {{/unless}}
+{{/if}}
+
+{{entries/entry-list feed=feed entries=entries markAsRead="markAsRead" loadMore="loadMore"}}
